@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Tabel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="judul">Tabel</h1>
+        <img src="Logo_ITERA.png" alt="" width="50ox" height="50px">
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <button><a href="https://dimassaputra059.github.io">Home</a></button>
+            <button><a href="https://dimassaputra059.github.io/form">Form</a></button>
+        </ul>
+    </nav>
+
+    <div class="tabel">
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Program Studi</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Jenis Kelamin</th>
+            <th>Tanggal Lahir</th>
+            <th>Alamat</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Dimas Saputra</td>
+            <td>121140059</td>
+            <td>Teknik Informatika</td>
+            <td>dimas.121140059@student.itera.ac.id</td>
+            <td>2003-04-05</td>
+            <td>Laki-laki</td>
+            <td>2003-04-05</td>
+            <td>Sidorejo</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Budi</td>
+            <td>121140111</td>
+            <td>Teknik Fisika</td>
+            <td>budi.121140111@student.itera.ac.id</td>
+            <td>123456</td>
+            <td>Laki-laki</td>
+            <td>2003-02-15</td>
+            <td>Lampung Tengah</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Ahmad Abdullah</td>
+            <td>121140089</td>
+            <td>Teknik Elektro</td>
+            <td>ahmad.121140089@student.itera.ac.id</td>
+            <td>123456</td>
+            <td>Laki-laki</td>
+            <td>2003-07-20</td>
+            <td>Jakarta</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Mawar</td>
+            <td>121140113</td>
+            <td>Teknik Kimia</td>
+            <td>mawar.121140113@student.itera.ac.id</td>
+            <td>123456</td>
+            <td>Perempuan</td>
+            <td>2003-01-05</td>
+            <td>Palembang</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Dinda</td>
+            <td>121140021</td>
+            <td>Teknik Sipil</td>
+            <td>dinda.121140021@student.itera.ac.id</td>
+            <td>123456</td>
+            <td>Perempuan</td>
+            <td>2003-10-22</td>
+            <td>Bandar Lampung</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td id="nama"></td>
+            <td id="nim"></td>
+            <td id="prodi"></td>
+            <td id="email"></td>
+            <td id="password"></td>
+            <td id="jenis_kelamin"></td>
+            <td id="tanggal_lahir"></td>
+            <td id="alamat"></td>
+        </tr>
+    </table>
+    </div>
+
+
+    <script>
+        //Ambil nilai parameter dari URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var encodedNama = urlParams.get("nama");
+        var encodedNim = urlParams.get("nim");
+        var encodedProdi = urlParams.get("prodi");
+        var encodedEmail = urlParams.get("email");
+        var encodedPassword = urlParams.get("password");
+        var encodedJenisKelamin = urlParams.get("jenis_kelamin");
+        var encodedTanggalLahir = urlParams.get("tanggal_lahir");
+        var encodedAlamat = urlParams.get("alamat");
+
+        // Decode data
+        var nama = decodeURIComponent(encodedNama);
+        var nim = decodeURIComponent(encodedNim);
+        var prodi = decodeURIComponent(encodedProdi);
+        var email = decodeURIComponent(encodedEmail);
+        var password = decodeURIComponent(encodedPassword);
+        var jenis_kelamin = decodeURIComponent(encodedJenisKelamin);
+        var tanggal_lahir = decodeURIComponent(encodedTanggalLahir);
+        var alamat = decodeURIComponent(encodedAlamat);
+
+        document.getElementById("nama").textContent = nama;
+        document.getElementById("nim").textContent = nim;
+        document.getElementById("prodi").textContent = prodi;
+        document.getElementById("email").textContent = email;
+        document.getElementById("password").textContent = password;
+        document.getElementById("jenis_kelamin").textContent = jenis_kelamin;
+        document.getElementById("tanggal_lahir").textContent = tanggal_lahir;
+        document.getElementById("alamat").textContent = alamat;
+    </script>
+
+    <footer>
+        <p>Dimas Saputra © 2023</p>
+    </footer>
+</body>
+</html>
